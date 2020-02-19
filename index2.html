@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CDN Example</title>
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/vue2-datatable-component.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="app"></div>
+
+<script src="js/vue.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src="js/vue2-datatable-component.min.js"></script>
+
+
+<script>
+                          new Vue({
+                            el: '#app',
+                            template: [
+                              '<div class="container">',
+                                '<code>query: {{ query }}</code>',
+                                '<datatable v-bind="$data" />',
+                              '</div>>'
+                            ].join(''),
+                            data: function () {
+                              return {
+                                columns: [
+                                  { title: '診断結果', field: 'job_name', sortable: true },
+                                  { title: '画像枚数', field: 'number_of_images' },
+                                  { title: '処理状態', field: 'status', sortable: true },
+                                  { title: '登録日時', field: 'created_at' },
+                                  { title: '', field: 'job_actions' },
+                                ],
+                                data: [{job_name: '診断結果1', number_of_images: '5', status:'完了', created_at: '2019年11月19日 18時30分50秒'},
+                                        {job_name: '診断結果2', number_of_images: '3', status:'完了', created_at: '2019年11月19日 18時35分50秒'},
+                                        {job_name: '診断結果3', number_of_images: '7', status:'完了', created_at: '2019年11月19日 18時40分50秒'},
+                                        {job_name: '診断結果4', number_of_images: '1', status:'未完了', created_at: '2019年11月19日 18時45分50秒'},
+                                        {job_name: '診断結果5', number_of_images: '3', status:'未完了', created_at: '2019年11月19日 18時50分50秒'},], // no data
+                                                            total: 0,
+                                query: {}
+                              }
+                            }
+                          })
+                        
+
+                          new Vue({
+    el: '#app',
+    template: [
+      '<div class="container">',
+        '<code>query: {{ query }}</code>',
+        '<datatable v-bind="$data" />',
+      '</div>>'
+    ].join(''),
+    data: function () {
+      return {
+        columns: [
+          { title: 'ユーザID', field: 'user_id', sortable: true },
+          { title: '名前', field: 'user_name' },
+          { title: '登録日時', field: 'created_at', sortable: true },
+          { title: '', field: 'email' },
+        ],
+        data: [{user_id:'aaaaaaaa', user_name: 'ユーザ1', created_at: '2019年11月19日 18時30分50秒', user_password: 'hogehoge1', user_role: '1'},
+            {user_id:'bbbbbbbb', user_name: 'ユーザ2', created_at: '2019年11月19日 18時30分50秒', user_password: 'hogehoge1', user_role: '1'},
+            {user_id:'cccccccc', user_name: 'ユーザ3', created_at: '2019年11月19日 18時30分50秒', user_password: 'hogehoge1', user_role: '2'},
+            {user_id:'dddddddd', user_name: 'ユーザ4', created_at: '2019年11月19日 18時30分50秒', user_password: 'hogehoge1', user_role: '2'},
+            {user_id:'eeeeeeee', user_name: 'ユーザ5', created_at: '2019年11月19日 18時30分50秒', user_password: 'hogehoge1', user_role: '2'},], // no data
+        total: 0,
+        query: {}
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+#topbar {
+    width: 100%;
+    height: 50px;
+}
+
+#sidebar {
+    margin-top:50px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.content {
+    margin-left: 280px;
+    margin-top: 50px;
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+}
+a.sidebar_menu:link {color: #fff;}
+a.sidebar_menu:visited {color: #fff;}
+a.sidebar_menu:hover { color: #fff; }
+a.sidebar_menu:active { color: #fff; }
+
+
+.black_rust_range {
+    -webkit-appearance:none;
+    background: url(../images/blightness.png);
+    
+    height:25px;
+    width:255px;
+}
+.rust_level_range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, .7);
+    width: 5px;
+    height: 50px;
+    display: block;
+    background-color: #fff;
+}
+
+#range_slider .slider-track-high {
+    background: yellow;
+}
+#range_slider .slider-track-low {
+    background: red;
+}
+#range_slider .slider-selection {
+    background: orange;
+}
+
+.input_label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.image_table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.image_table_header {
+  background-color:#dddddd;
+  border-left: 1px solid #3c6690;
+  border-right: 1px solid #3c6690;
+  border-top: 1px solid #3c6690;
+  border-bottom: 1px solid #3c6690;
+  padding: 10px 10px;
+  text-align: center;
+}
+.image_table_cell {
+    border-right:solid 1px #3c6690;
+    border-left:solid 1px #3c6690;
+    padding: 10px 10px;
+}
+.score_table_cell {
+    text-align: center;
+    border-right:solid 1px #3c6690;
+    border-left:solid 1px #3c6690;
+    border-bottom: 1px solid #3c6690;
+    padding: 10px 10px;
+}
+.user_create_area {
+    margin: 0;
+    margin-bottom: 30px;
+}
+.user_create_area .input_label {
+    margin-top: 15px;
+}
+.user_list_block {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: solid 1px #aaa;
+}
